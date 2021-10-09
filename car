@@ -1,0 +1,99 @@
+<?php
+
+
+
+class Car
+
+{
+    protected string $color;
+    private int $currentSpeed;
+    private int $nbSeat = 4;
+    protected int $nbWheel = 4;
+    protected string $energy;
+    protected int $energyLevel;
+
+
+    public function __construct() {
+        $this->color ='black';
+        $this->nbSeat= 4;
+        $this->energy='Gasoil';
+    }
+
+
+    public function getForward(): string
+
+    {
+
+        $this->currentSpeed = 90;
+
+
+        return "Alummer le voiture !";
+
+    }
+    public function setFoward():string
+    {
+        $this->currentSpeed = $currentSpeed;
+
+    }
+
+
+    public function setBrake(): string
+
+    {
+
+        $sentence = "";
+
+        while ($this->currentSpeed > 0) {
+
+            $this->currentSpeed--;
+
+            $sentence .= "Brake !!!";
+
+        }
+
+        $sentence .= "I'm stopped !";
+
+        return $sentence;
+
+    }
+
+    public function setStart():string
+    {
+        $this->energyLevel = 10;
+        return "tu arrives sur la réserve ";
+
+    }
+
+    public function getNbWheel():int
+    {
+        $this->nbWheel=3;
+        return 3 ;
+
+    }
+
+    public function getCurrentSpeed():int
+    {
+        $this->currentSpeed=110;
+        return 110;
+    }
+
+    public function getColor():string
+    {
+        $this->color='black';
+        return 'ta voiture est noire';
+    }
+
+    public function nbSeats():int
+    {
+        $this->nbSeat=4;
+        return 4;
+    }
+
+    public function energy():string
+    {
+        $this->energy='gasoil';
+        return "la voiture roule au diesel";
+    }
+
+    }
+
