@@ -3,7 +3,7 @@
 
 require_once 'bicycles.php';
 
-$Car = new car();
+$Car = new car('noir',4,'gasoil');
 
 echo $Car->setStart();
 
@@ -19,6 +19,8 @@ echo $Car->energy() .'<br>';
 
 
 echo $Car->getColor();
-echo '<br> Tu as un pneu crevé, tu roules sur ' .  $Car->getNbWheel() . 'roues' . '<br>';
+echo '<br> tu roules sur ' .  $Car->getNbWheel() . 'roues' . '<br>';
 echo '<br> La voiture a ' . $Car->nbSeats() . ' sièges' . '<br>';
+
+
 
