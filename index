@@ -1,0 +1,24 @@
+<?php
+
+
+require_once 'bicycles.php';
+
+$Car = new car();
+
+echo $Car->setStart();
+
+echo $Car->getForward();
+
+echo '<br> Vitesse de la voiture : ' . $Car->getCurrentSpeed() . ' km/h' . '<br>';
+
+echo $Car->setBrake();
+
+echo '<br> Vitesse de la voiture : ' . $Car->getCurrentSpeed() . ' km/h' . '<br>';
+
+echo $Car->energy() .'<br>';
+
+
+echo $Car->getColor();
+echo '<br> Tu as un pneu crevé, tu roules sur ' .  $Car->getNbWheel() . 'roues' . '<br>';
+echo '<br> La voiture a ' . $Car->nbSeats() . ' sièges' . '<br>';
+
