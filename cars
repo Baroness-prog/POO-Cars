@@ -1,0 +1,95 @@
+<?php
+
+
+
+class Car
+
+{
+    protected string $color;
+    private int $currentSpeed;
+    private int $nbSeat = 4;
+    private int $nbWheel = 4;
+    private string $energy;
+    private int $energyLevel;
+
+
+    public function __construct( string $color,int $nbSeat, string $energy) {
+        $this->color = $color;
+        $this->nbSeat= $nbSeat;
+        $this->energy= $energy;
+    }
+
+
+    public function getForward(): string
+
+    {
+
+       $this->currentSpeed = 110 ;
+       return "tu roules trop vites";
+
+
+    }
+    public function setFoward():string
+    {
+        $this->currentSpeed = 50;
+        return "tu avances";
+
+    }
+
+
+    public function setBrake(): string
+
+    {
+
+        $sentence = "";
+
+        while ($this->currentSpeed > 0) {
+
+            $this->currentSpeed--;
+
+            $sentence .= "Brake !!!";
+
+        }
+
+        $sentence .= "I'm stopped !";
+
+        return $sentence;
+
+    }
+
+    public function setStart():string
+    {
+        $this->energyLevel=40;
+        return "Niveau de carburant plein";
+
+    }
+
+    public function getNbWheel():int
+    {
+        return $this->nbWheel ;
+    }
+
+    public function getCurrentSpeed():int
+    {
+        return $this->currentSpeed ;
+
+    }
+
+    public function getColor():string
+    {
+        return $this->color;
+
+    }
+
+    public function nbSeats():int
+    {
+        return $this->nbSeat;
+    }
+
+    public function energy():string
+    {
+        return $this->energy;
+
+    }
+
+    }
